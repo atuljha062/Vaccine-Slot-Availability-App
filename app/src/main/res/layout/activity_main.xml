@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/cardBackground">
+
+    <EditText
+        android:id="@+id/idEditPinCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/idSearchBtn"
+        android:inputType="number"
+        android:hint="Enter PinCode"
+        android:layout_margin="5dp"
+        android:layout_toLeftOf="@id/idSearchBtn" />
+    <Button
+        android:id="@+id/idSearchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="Search"
+        android:textAllCaps="false"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"/>
+
+    <ProgressBar
+        android:id="@+id/idPBLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/idRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/idEditPinCode"
+        android:layout_marginTop="13dp" />
+
+
+</RelativeLayout>
